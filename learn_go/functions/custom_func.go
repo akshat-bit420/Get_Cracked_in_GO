@@ -10,16 +10,25 @@ import "fmt"
 // 	 and it's mandatory to explicitly mentions the return type.
 // 	return x + y
 // }
-func swap(x,y string) (string, string) {
-	return y,x
-// Go can also return multiple values from inside, it takes 2 parameter.
-// as both the parameters are same we have merged it via single string for declaration
-// just takes x and y and return y inplace of x and x in place of y.
+// func swap(x,y string) (string, string) {
+// 	return y,x
+// // Go can also return multiple values from inside, it takes 2 parameter.
+// // as both the parameters are same we have merged it via single string for declaration
+// // just takes x and y and return y inplace of x and x in place of y.
+// }
+func split(sum int) (x,y int) {
+	// we have a func split(takes 1 parameter and returns 2 vals of type int)
+	// we have named the return values by x and y, and they are now initialized 
+	// by a value 0 implicitily, meaning we can directly use those values,
+	// which helps us not by writing return x , y (just return is sufficient)
+	x = sum * 4 / 9
+	y = sum - x
+	return 
 }
+
 func main() {	
-	a , b := swap("Hello", "world")
+	// a , b := swap("Hello", "world")
 	// the  " := " is used when we don't have to declare the variable type,
 	// as Go does it automatically, just like python.
-
-	fmt.Println(a, b)
+	fmt.Println(split(17))
 }
