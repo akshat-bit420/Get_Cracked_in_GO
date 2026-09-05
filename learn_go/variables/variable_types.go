@@ -59,5 +59,5 @@ func main() {
 	var z uint = uint(f)
 	fmt.Println(x, y, z)
 	// as Go is a explicitly typed language, types need to be converted manually.
-	// as there is not explicit conversion.
+	// as there is not implicit type conversion.
 }
