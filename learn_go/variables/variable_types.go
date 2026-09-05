@@ -36,15 +36,28 @@ package main
 // 	fmt.Printf("Type: %T value: %v\n",z,z)
 // }
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
+// func main() {
+// 	var i int
+// 	var j float64
+// 	var k bool 
+// 	var l string
+// 	// if we declare our variable without a value, Go automatically takes it has 0,empty.
+// 	// and 1 called nil(from reference data types).
+// 	// %q is basically printing a string but with quotes, "", if %v then we won't see any quotes,
+// 	// so if we need a empty sting to be visible use %q
+// 	fmt.Printf("%v %v %v %q\n", i,j,k,l)
+// }
+
 func main() {
-	var i int
-	var j float64
-	var k bool 
-	var l string
-	// if we declare our variable without a value, Go automatically takes it has 0,empty.
-	// and 1 called nil(from reference data types).
-	// %q is basically printing a string but with quotes, "", if %v then we won't see any quotes,
-	// so if we need a empty sting to be visible use %q
-	fmt.Printf("%v %v %v %q\n", i,j,k,l) 
+	// Type conversions. 
+	var x, y int = 5, 7
+	var f float64 = math.Sqrt(float64(x*x + y*y))
+	var z uint = uint(f)
+	fmt.Println(x, y, z)
+	// as Go is a explicitly typed language, types need to be converted manually.
+	// as there is not explicit conversion.
 }
