@@ -2,8 +2,11 @@ package main
 import "fmt"
 
 type Vertex struct {
-	x int 
-	y int
+	X int 
+	Y int
+	// capital var is used cause it can be used in another file
+	// let's say both the instances have the same name, then the same instance can,
+	// be used ouutside the struct for a different set of functions.
 }
 // func main() {
 // 	v := Vertex{1,9}
@@ -15,7 +18,7 @@ type Vertex struct {
 func main() {
 	v  := Vertex{7,8}
 	p  := &v
-	p.x = 2e6
+	p.X = 2e6
 	// 1e notation works as power but only in terms of 10,
 	// 2e6 means 6 times 0 after 2
 	fmt.Println(v)
